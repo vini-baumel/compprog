@@ -3,7 +3,7 @@ run() {
     local test="${2:-1}"
     local input="${src}${test}.txt"
 
-    g++ -Wall -Wextra -Wshadow "$src.cpp" -o main.out || return 1
+    g++ -Wall -Wextra -Wshadow -DLOCAL "$src.cpp" -o main.out || return 1
 
     if [ -f "$input" ]; then
         ./main.out < "$input"
