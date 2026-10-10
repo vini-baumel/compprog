@@ -1,13 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-template<class T> void _p(const T& x) {
-    if constexpr (requires { cerr << x; }) cerr << x;
-    else { cerr << "{ "; for_each((x).begin(), (x).end(), [](auto& e) { _p(e); cerr << ' '; }); cerr << '}'; }
-}
-template<class... T> void _dbg(const char* s, const T&... x) { cerr << s << " ="; ((cerr << ' ', _p(x)), ...); cerr << '\n'; }
-#define dbg(...) _dbg(#__VA_ARGS__, __VA_ARGS__)
-// #define dbg(...)
+#ifdef LOCAL
+template<class A, class B> ostream& operator<<(ostream&, const pair<A, B>&);
+template<class T, class = decltype(begin(declval<T>())), class = typename enable_if<!is_convertible<T, string>::value>::type>
+ostream& operator<<(ostream& o, const T& v) { o << '{'; string s; for (const auto& x : v) o << s << x, s = ", "; return o << '}'; }
+template<class A, class B> ostream& operator<<(ostream& o, const pair<A, B>& p) { return o << '(' << p.first << ", " << p.second << ')'; }
+void dbg_out() { cerr << endl; }
+template<class H, class... T> void dbg_out(const H& h, const T&... t) { cerr << ' ' << h; dbg_out(t...); }
+#define dbg(...) cerr << "[" << #__VA_ARGS__ << "]:", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
