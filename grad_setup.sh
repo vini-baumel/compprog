@@ -89,7 +89,7 @@ cat > .vscode/launch.json <<EOF
     "type": "cppdbg",
     "request": "launch",
     "program": "\${fileDirname}/\${fileBasenameNoExtension}",
-    "args": ["<", "\${fileDirname}/in.txt"],
+    "args": [],
     "cwd": "\${fileDirname}",
     "MIMode": "$MIMODE",
     "miDebuggerPath": "$DBG",
@@ -107,7 +107,6 @@ cat > .vscode/settings.json <<EOF
 }
 EOF
 
-touch in.txt
 echo "Done. compiler: $GXX | debugger: $DBG ($MIMODE)"
 echo "Open with:  codecpp .   (in a new terminal; or: code --extensions-dir \"$EXTDIR\" .)"
-echo "Ctrl+Shift+B = build, F5 = debug (input comes from in.txt)"
+echo "Ctrl+Shift+B = build, F5 = debug (type the input in the terminal)"
