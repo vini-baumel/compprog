@@ -15,18 +15,23 @@ template<class H, class... T> void dbg_out(const H& h, const T&... t) { cerr << 
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define qfor(i,a,b) for(int i =a; i < b; i++)
-#define vcin(v) for(auto &x:(v)) cin >> x
+#define qfor(i,a,b) for(int i = a; i < b; i++)
+#define mset(v, x) memset((v), (x), sizeof(v))
+#define vcin(v) for(auto &x : (v)) cin >> x
+#define vcout(v) for(const auto &x : (v)) cout << x
 
 using ll = long long;
 using vi = vector<int>;
 using vll = vector<ll>;
 using vvi = vector<vi>;
-using vpii = vector<pair<int,int>>;
+using ar2 = array<int, 2>;
+using ar3 = array<int, 3>;
+using var2 = vector<ar2>;
+using var3 = vector<ar3>;
 
-#define EL << "\n"
-#define ES << " "
-#define SS << " " <<
+#define el << "\n"
+#define es << " "
+#define ss << " " <<
 
 void solve() {
     
