@@ -7,8 +7,8 @@ using namespace std;
 
 #define all(x) (x).begin(), (x).end()
 #define qfor(i,a,b) for(int i = (a); i < (b); i++)
-#define faut(x,v) for(auto x : v)
-#define rout(v,a,b) qfor(_i,a,b) cout << (v)[_i] es
+#define fauto(x,v) for(auto x : v)
+#define rcout(v,a,b) qfor(_i,a,b) cout << (v)[_i] es
 
 #ifdef LOCAL
 #define dbg(s,x) cout << s << " = "; x; cout el
