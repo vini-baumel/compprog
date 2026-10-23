@@ -7,7 +7,6 @@ using namespace std;
 
 #define all(x) (x).begin(), (x).end()
 #define qfor(i,a,b) for(int i = (a); i < (b); i++)
-#define fauto(x,v) for(auto x : v)
 #define rcout(v,a,b) qfor(_i,a,b) cout << (v)[_i] es
 
 #ifdef LOCAL
@@ -17,9 +16,8 @@ using namespace std;
 #endif
 
 template<class x> using vec = vector<x>;
+template<class x, size_t y> using arr = array<x,y>;
 using ll = long long;
-using ar2 = array<int, 2>;
-using ar3 = array<int, 3>;
 
 void solve() {
     
